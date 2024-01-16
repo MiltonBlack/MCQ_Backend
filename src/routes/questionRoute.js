@@ -48,7 +48,7 @@ router.post("/add-option", verify, async (req, res) => {
 });
 
 // Edit Options to a Question
-router.put("/update-option", verify, async (req, res) => {
+router.put("/update-option/:id", verify, async (req, res) => {
     try {
         const updateOptions = await Options.findByIdAndUpdate(req.params.id, { $set: req.body, }
             , { new: true });
@@ -59,7 +59,7 @@ router.put("/update-option", verify, async (req, res) => {
 });
 
 // Delete Options to a Question
-router.delete("/delete-option", verify, async (req, res) => {
+router.delete("/delete-option/:id", verify, async (req, res) => {
     try {
         const deleteOptions = await Options.findByIdAndDelete({ _id: req.params.id });
         res.status(200).json(deleteOptions);
