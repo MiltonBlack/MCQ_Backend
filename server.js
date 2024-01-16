@@ -12,7 +12,7 @@ if (!process.env.PORT) {
     process.exit(1);
 }
 
-connectDB();
+connectDB(); 
 const app = express();
 app.use(cors({ credentials: true })); 
 app.use(express.json());
