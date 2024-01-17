@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const { Schema } = require('mongoose');
+import mongoose, {Schema} from "mongoose";
 
 const authSchema = new Schema({
     isAdmin: { type: Boolean, default: false },
@@ -11,4 +10,4 @@ const authSchema = new Schema({
     accessID: { type: String, default: "" },
 }, { timestamps: true });
 
-module.exports = mongoose.model('Auth', authSchema);
+export const Auth = mongoose.model('Auth', authSchema);

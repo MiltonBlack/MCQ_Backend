@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const { Schema } = require('mongoose');
+import mongoose, {Schema} from "mongoose";
 
 const questionSchema = new Schema({
     course_id: { type: String },
@@ -9,4 +8,4 @@ const questionSchema = new Schema({
     type: { type: String, },
 }, { timestamps: true });
 
-module.exports = mongoose.model('Question', questionSchema);
+export const QuestionModel = mongoose.model('Question', questionSchema);

@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const { Schema } = require('mongoose');
+import mongoose, {Schema} from "mongoose";
 
 const courseSchema = new Schema({
     user_id: { type: String },
@@ -10,4 +9,4 @@ const courseSchema = new Schema({
     lecturerName: { type: String },
 }, { timestamps: true });
 
-module.exports = mongoose.model('Course', courseSchema);
+export const CourseModel = mongoose.model('Course', courseSchema);

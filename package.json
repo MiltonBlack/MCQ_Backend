@@ -1,8 +1,8 @@
 {
   "name": "mcq-backend",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "dist/server.js",
   "dependencies": {
     "@types/cors": "^2.8.17",
     "@types/crypto-js": "^4.2.1",
@@ -26,7 +26,9 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "build": "tsc -p .",
     "server": "nodemon server.js"
   },
   "author": "Milton Black, Ipigansi",

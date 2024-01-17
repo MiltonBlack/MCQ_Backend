@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const { Schema } = require('mongoose');
+import mongoose, {Schema} from "mongoose";
 
 const optionsSchema = new Schema({
     question_id: {type: String},
@@ -9,4 +8,4 @@ const optionsSchema = new Schema({
     d: { type: String },
 }, { timestamps: true });
 
-module.exports = mongoose.model('Option', optionsSchema);
+export const OptionModel = mongoose.model('Option', optionsSchema);
