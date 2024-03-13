@@ -7,7 +7,6 @@ export async function verify(req: Request, res: Response, next: NextFunction) {
         const token = authHeader.split(" ")[1];
         jwt.verify(token, process.env.SECRET_KEY as string, (err: any, user: any) => {
             if (err) return res.status(403).json("Token cannot be verified!!!");
-            // req.user: = user;
             next();
         })
     } else {
